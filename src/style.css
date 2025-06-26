@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Classe que envolve o menu */
+.menu {
+    padding: 4px;
+}
+
+.menu li {
+    list-style: none;
+
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    background-color: royalblue;
+    display: block;
+    padding: 4px;
+}
+
+.menu a:hover {
+    background-color: rgb(26, 48, 116);
+}
+
+
+/* Responsividade com media queries */
+@media (min-width: 768px) {
+    
+}
+
+/*
+    Breakpoints Tailwind css
+    sm => 640px
+    md => 768px
+    lg => 1024px
+    xl => 1280px
+    2xl => 1536px
+*/
