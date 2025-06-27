@@ -1,19 +1,26 @@
 <!doctype html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/typescript.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsividade</title>
-  </head>
-  <body>
-    <div id="app" class="container">
-      <ul class="menu">
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsividade</title>
+</head>
+
+<body>
+  <div id="app" class="container">
+    <nav class="navbar">
+      <div class="menu-toggle" id="menuToggle">
+        <img src="/menu.svg" alt="Menu" class="menu-icon">
+        <img src="/fechar.svg" alt="Fechar" class="close-icon">
+      </div>
+      <ul class="menu" id="menu">
         <li>
-          <a href="#">Inicio</a>
+          <a href="#">Início</a>
         </li>
         <li>
-          <a href="#">Projetos</a>
+          <a href="#">Projeto</a>
         </li>
         <li>
           <a href="#">Quem Somos</a>
@@ -22,7 +29,8 @@
           <a href="#">Contato</a>
         </li>
       </ul>
-    </div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    </nav>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
 </html>
