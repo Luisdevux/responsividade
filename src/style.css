@@ -11,7 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Barra de navegação */
 .header {
   position: relative;
   background: rgb(7, 119, 44);
@@ -191,16 +190,36 @@ body {
   transform: translateY(-2px);
 }
 
+
 .banner-arrows {
   position: absolute;
-  left: 20px;
+  padding: 20px;
   top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
   transform: translateY(-50%);
 }
 
 .banner-arrows button {
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid white;
+  pointer-events: auto;
+}
+
+.banner-arrows .prev {
+  margin-left: 20px;
+}
+
+.banner-arrows .next {
+  margin-right: 20px;
+}
+
+.banner-arrows button {
+  background: rgba(81, 81, 81, 0.2);
+  border: 2px solid rgb(81, 81, 81);
   color: white;
   width: 50px;
   height: 50px;
@@ -300,16 +319,34 @@ body {
 }
 
 .news {
-  padding: 60px 20px;
+  padding: 20px 20px;
   background-color: #fff;
+}
+
+.news-header {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 500px;
+}
+
+.news-all-link {
+  color: rgb(7, 119, 44);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: text-decoration 0.2s;
+}
+
+.news-all-link:hover {
+  text-decoration: underline;
 }
 
 .news-container {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 40px;
+  gap: 10px;
 }
 
 .news-main {
@@ -320,6 +357,7 @@ body {
 
 .news-card {
   display: flex;
+  flex-direction: column;
   background: white;
   border-radius: 10px;
   overflow: hidden;
@@ -332,8 +370,7 @@ body {
 }
 
 .news-card img {
-  width: 200px;
-  height: 150px;
+  height: 200px;
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -344,9 +381,14 @@ body {
 }
 
 .news-date {
-  color: rgb(7, 119, 44);
-  font-size: 0.9rem;
-  font-weight: 600;
+  background-image: url(/public/Calendario.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 20px;
+  padding-left: 20px;
+  color: rgb(120, 120, 120);
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .news-content h3 {
@@ -374,7 +416,6 @@ body {
   text-decoration: underline;
 }
 
-/* Sidebar de Eventos */
 .events-sidebar {
   background: #f8f9fa;
   padding: 30px 25px;
@@ -405,7 +446,7 @@ body {
 .event-date {
   background: rgb(7, 119, 44);
   color: white;
-  padding: 8px 12px;
+  padding: 8px 22px;
   border-radius: 5px;
   font-weight: 600;
   font-size: 0.8rem;
@@ -464,6 +505,9 @@ body {
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .course-card:hover {
@@ -493,9 +537,12 @@ body {
 }
 
 .course-link {
+  display: block;
   color: rgb(7, 119, 44);
   text-decoration: none;
   font-weight: 600;
+  margin: 0 0 20px 0;
+  padding: 10px 0 0 0;
 }
 
 .course-link:hover {
@@ -507,7 +554,6 @@ body {
   margin-top: 40px;
 }
 
-/* Rodapé */
 .footer {
   display: flex;
   flex-direction: column;
