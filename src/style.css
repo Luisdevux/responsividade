@@ -465,6 +465,7 @@ body {
 .event-item p {
   color: #666;
   font-size: 0.85rem;
+  padding: 0px 15px;
 }
 
 .courses {
