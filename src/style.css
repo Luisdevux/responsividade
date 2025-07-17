@@ -26,7 +26,6 @@ body {
   z-index: 1001;
   background: none;
   border: none;
-  float: right;
 }
 
 .icone-menu,
@@ -60,7 +59,7 @@ body {
   display: none;
   padding: 0;
   background: rgb(7, 119, 44);
-  margin-top: 10px;
+  margin-top: 1px;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
@@ -70,14 +69,107 @@ body {
   animation: slideDown 0.3s ease;
 }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
+/* Responsividade Mobile para novas seções */
+@media (max-width: 767px) {
+  /* Banner mobile */
+  .destaque {
+    height: 60vh;
+    text-align: center;
+    justify-content: center;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .destaque h1 {
+    font-size: 40px;
+  }
+  .destaque p {
+    font-size: 16px;
+  }
+  .destaque-setas {
+    display: none;
+  }
+  /* Acesso rápido mobile */
+  .grade-servicos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .cartao-servico {
+    padding: 20px 15px;
+  }
+  .cartao-servico .icone {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+  /* Notícias mobile */
+  .noticias-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .noticias-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .eventos-lateral {
+    order: 2;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .cartao-noticia {
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+  }
+  .cartao-noticia img {
+    width: 100%;
+    height: 200px;
+    min-width: 0;
+    object-fit: cover;
+  }
+  /* Ajuste do ícone do menu no cabeçalho mobile */
+  .cabecalho {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 19.2px 16px 19.2px;
+  }
+  .menu-hamburguer {
+    position: relative;
+    margin-left: 0;
+    margin-right: auto;
+    float: none;
+    z-index: 1001;
+  }
+  /* Navegação mobile */
+  .navegacao {
+    width: 100vw;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 100%;
+    min-width: 200px;
+    max-width: none;
+    z-index: 2000;
+    margin-top: 1px;
+  }
+  .navegacao.active {
+    left: 0;
+    right: 0;
+    z-index: 2000;
+  }
+  /* Cursos mobile */
+  .cursos h2 {
+    font-size: 32px;
+  }
+  .grade-cursos {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .cartao-curso {
+    margin: 0 10px;
   }
 }
 
@@ -848,13 +940,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  padding: 16px 19.2px 16px 19.2px;
+    padding: 16px 19.2px 16px 19.2px;
   }
   .menu-hamburguer {
     position: relative;
+    margin-left: 0;
+    margin-right: auto;
     float: none;
-    margin-left: auto;
-    margin-right: 0;
     z-index: 1001;
   }
   
