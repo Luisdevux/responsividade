@@ -11,14 +11,14 @@ body {
   overflow-x: hidden;
 }
 
-.header {
+.cabecalho {
   position: relative;
   background: rgb(7, 119, 44);
-  padding: 1rem;
+  padding: 16px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.hamburger {
+.menu-hamburguer {
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -29,8 +29,8 @@ body {
   float: right;
 }
 
-.menu-icon,
-.close-icon {
+.icone-menu,
+.icone-fechar {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -40,23 +40,23 @@ body {
   filter: brightness(0) invert(1);
 }
 
-.menu-icon {
+.icone-menu {
   opacity: 1;
 }
 
-.close-icon {
+.icone-fechar {
   opacity: 0;
 }
 
-.hamburger.active .menu-icon {
+.menu-hamburguer.active .icone-menu {
   opacity: 0;
 }
 
-.hamburger.active .close-icon {
+.menu-hamburguer.active .icone-fechar {
   opacity: 1;
 }
 
-.navigation {
+.navegacao {
   display: none;
   padding: 0;
   background: rgb(7, 119, 44);
@@ -65,7 +65,7 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.navigation.active {
+.navegacao.active {
   display: block;
   animation: slideDown 0.3s ease;
 }
@@ -81,11 +81,11 @@ body {
   }
 }
 
-.navigation > li {
+.navegacao > li {
   list-style: none;
 }
 
-.navigation li a {
+.navegacao li a {
   text-decoration: none;
   color: white;
   background-color: transparent;
@@ -95,11 +95,11 @@ body {
   transition: background-color 0.2s ease;
 }
 
-.navigation li a:hover {
+.navegacao li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.navigation li:last-child a {
+.navegacao li:last-child a {
   border-bottom: none;
 }
 
@@ -114,13 +114,13 @@ body {
 }
 
 .content h1 {
-  font-size: 2.5rem;
+  font-size: 40px;
   color: #333;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
-.banner {
+.destaque {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/header.png');
   background-size: cover;
   background-position: center;
@@ -133,48 +133,48 @@ body {
   position: relative;
 }
 
-.banner-content {
+.destaque-conteudo {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
 }
 
-.banner h1 {
-  font-size: 3.5rem;
+.destaque h1 {
+  font-size: 56px;
   font-weight: bold;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.banner p {
-  font-size: 1.2rem;
+.destaque p {
+  font-size: 19px;
   margin-bottom: 30px;
   max-width: 600px;
   line-height: 1.6;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
-.button {
+.botao {
   background-color: rgb(7, 119, 44);
   color: white;
   padding: 15px 30px;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 1.1rem;
+  font-size: 18px;
   font-weight: 600;
   transition: all 0.3s ease;
   display: inline-block;
   text-transform: uppercase;
 }
 
-.button:hover {
+.botao:hover {
   background-color: rgb(5, 95, 35);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.button-primary {
+.botao-principal {
   background-color: rgb(7, 119, 44);
   color: white;
   padding: 12px 25px;
@@ -185,13 +185,13 @@ body {
   display: inline-block;
 }
 
-.button-primary:hover {
+.botao-principal:hover {
   background-color: rgb(5, 95, 35);
   transform: translateY(-2px);
 }
 
 
-.banner-arrows {
+.destaque-setas {
   position: absolute;
   padding: 20px;
   top: 50%;
@@ -205,19 +205,19 @@ body {
   transform: translateY(-50%);
 }
 
-.banner-arrows button {
+.destaque-setas button {
   pointer-events: auto;
 }
 
-.banner-arrows .prev {
+.destaque-setas .prev {
   margin-left: 20px;
 }
 
-.banner-arrows .next {
+.destaque-setas .next {
   margin-right: 20px;
 }
 
-.banner-arrows button {
+.destaque-setas button {
   background: rgba(81, 81, 81, 0.2);
   border: 2px solid rgb(81, 81, 81);
   color: white;
@@ -225,18 +225,18 @@ body {
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 24px;
   margin: 10px 0;
   transition: all 0.3s ease;
   display: block;
 }
 
-.banner-arrows button:hover {
+.destaque-setas button:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: scale(1.1);
 }
 
-.indicators {
+.indicadores {
   position: absolute;
   bottom: 30px;
   left: 50%;
@@ -245,7 +245,7 @@ body {
   gap: 10px;
 }
 
-.indicators .dot {
+.indicadores .ponto {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -254,25 +254,32 @@ body {
   transition: all 0.3s ease;
 }
 
-.indicators .dot.active {
+.indicadores .ponto.active {
   background: white;
   transform: scale(1.2);
 }
 
-.quick-access {
+.acesso-rapido {
   background-color: #f8f9fa;
   padding: 60px 20px;
 }
 
 .quick-access h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+.acesso-rapido h2 {
+  text-align: center;
+  font-size: 40px;
   color: #333;
   margin-bottom: 50px;
   font-weight: 700;
 }
 
-.services-grid {
+.grade-servicos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
@@ -280,7 +287,7 @@ body {
   margin: 0 auto;
 }
 
-.service-card {
+.cartao-servico {
   background: white;
   padding: 30px 20px;
   border-radius: 10px;
@@ -290,12 +297,12 @@ body {
   cursor: pointer;
 }
 
-.service-card:hover {
+.cartao-servico:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.service-card .icon {
+.cartao-servico .icone {
   width: 60px;
   height: 60px;
   margin: 0 auto 20px;
@@ -303,38 +310,38 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 32px;
 }
 
-.service-card h3 {
+.cartao-servico h3 {
   color: #333;
   margin-bottom: 15px;
-  font-size: 1.2rem;
+  font-size: 19px;
 }
 
-.service-card p {
+.cartao-servico p {
   color: #666;
   line-height: 1.5;
-  font-size: 0.95rem;
+  font-size: 15px;
 }
 
-.news {
+.noticias {
   padding: 20px 20px;
   background-color: #fff;
 }
 
-.news-header {
+.noticias-cabecalho {
   grid-column: 1 / -1;
   display: flex;
   align-items: center;
   gap: 500px;
 }
 
-.news-all-link {
+.noticias-todas-link {
   color: rgb(7, 119, 44);
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 16px;
   transition: text-decoration 0.2s;
 }
 
@@ -342,20 +349,21 @@ body {
   text-decoration: underline;
 }
 
-.news-container {
+.noticias-container {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   gap: 10px;
 }
 
-.news-main {
+.noticias-principal {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
+  line-height: 1.4;
 }
 
-.news-card {
+.cartao-noticia {
   display: flex;
   flex-direction: column;
   background: white;
@@ -365,22 +373,22 @@ body {
   transition: transform 0.3s ease;
 }
 
-.news-card:hover {
+.cartao-noticia:hover {
   transform: translateY(-3px);
 }
 
-.news-card img {
+.cartao-noticia img {
   height: 200px;
   object-fit: cover;
   flex-shrink: 0;
 }
 
-.news-content {
+.noticia-conteudo {
   padding: 20px;
   flex: 1;
 }
 
-.news-date {
+.noticia-data {
   background-image: url(/public/Calendario.svg);
   background-repeat: no-repeat;
   background-position: left center;
@@ -391,108 +399,105 @@ body {
   font-weight: 400;
 }
 
-.news-content h3 {
-  margin: 10px 0;
-  color: #333;
-  font-size: 1.1rem;
-  line-height: 1.4;
-}
-
-.news-content p {
-  color: #666;
-  margin-bottom: 15px;
-  line-height: 1.5;
-  font-size: 0.95rem;
-}
-
-.news-link {
-  color: rgb(7, 119, 44);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.news-link:hover {
+.noticias-todas-link:hover {
   text-decoration: underline;
 }
 
-.events-sidebar {
+.noticia-conteudo p {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.noticia-link {
+  color: rgb(7, 119, 44);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.noticia-link:hover {
+  text-decoration: underline;
+}
+
+.eventos-lateral {
   background: #f8f9fa;
   padding: 30px 25px;
   border-radius: 10px;
   height: fit-content;
 }
 
-.events-sidebar h3 {
+.eventos-lateral h3 {
   color: #333;
   margin-bottom: 25px;
-  font-size: 1.5rem;
+  font-size: 24px;
   text-align: center;
 }
 
-.event-item {
+.item-evento {
   display: flex;
   margin-bottom: 25px;
   padding-bottom: 20px;
   border-bottom: 1px solid #e9ecef;
 }
 
-.event-item:last-child {
+.item-evento:last-child {
   margin-bottom: 0;
   border-bottom: none;
   padding-bottom: 0;
 }
 
-.event-date {
+.data-evento {
   background: rgb(7, 119, 44);
   color: white;
   padding: 8px 22px;
   border-radius: 5px;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 13px;
   text-align: center;
   min-width: 60px;
   margin-right: 15px;
 }
 
-.event-item h4 {
+.item-evento h4 {
   color: #333;
   margin-bottom: 5px;
-  font-size: 0.95rem;
+  font-size: 15px;
   line-height: 1.3;
 }
 
-.event-item p {
+.item-evento p {
   color: #666;
-  font-size: 0.85rem;
+  font-size: 14px;
   padding: 0px 15px;
 }
 
-.courses {
+.cursos {
   padding: 60px 20px;
   background-color: #f8f9fa;
 }
 
-.courses h2 {
+.cursos h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 40px;
   color: #333;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
-.courses-subtitle {
+.cursos-subtitulo {
   text-align: center;
   color: #666;
   margin-bottom: 50px;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.1rem;
+  font-size: 18px;
   line-height: 1.6;
 }
 
-.courses-grid {
+.grade-cursos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
@@ -500,7 +505,7 @@ body {
   margin: 0 auto 40px;
 }
 
-.course-card {
+.cartao-curso {
   background: white;
   border-radius: 10px;
   overflow: hidden;
@@ -511,33 +516,33 @@ body {
   justify-content: space-between;
 }
 
-.course-card:hover {
+.cartao-curso:hover {
   transform: translateY(-5px);
 }
 
-.course-card img {
+.cartao-curso img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-.course-content {
+.curso-conteudo {
   padding: 25px;
 }
 
-.course-content h3 {
+.curso-conteudo h3 {
   color: #333;
   margin-bottom: 15px;
-  font-size: 1.2rem;
+  font-size: 19px;
 }
 
-.course-content p {
+.curso-conteudo p {
   color: #666;
   margin-bottom: 20px;
   line-height: 1.5;
 }
 
-.course-link {
+.curso-link {
   display: block;
   color: rgb(7, 119, 44);
   text-decoration: none;
@@ -546,22 +551,22 @@ body {
   padding: 10px 0 0 0;
 }
 
-.course-link:hover {
+.curso-link:hover {
   text-decoration: underline;
 }
 
-.show-all-courses {
+.ver-todos-cursos {
   text-align: center;
   margin-top: 40px;
 }
 
-.footer {
+.rodape {
   display: flex;
   flex-direction: column;
   background-color: rgb(0, 71, 0);
 }
 
-.footer-links {
+.rodape-links {
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -569,17 +574,17 @@ body {
   background-color: rgb(1, 71, 1);
 }
 
-.footer-links > div {
+.rodape-links > div {
   width: 100%;
   padding: 15px;
   border-bottom: 1px solid rgba(70, 136, 70, 0.3);
 }
 
-.footer-links > div:last-child {
+.rodape-links > div:last-child {
   border-bottom: none;
 }
 
-.footer-links p {
+.rodape-links p {
   color: rgb(70, 136, 70);
   font-size: 18px;
   font-weight: 700;
@@ -589,7 +594,7 @@ body {
   padding-bottom: 8px;
 }
 
-.footer-links a {
+.rodape-links a {
   display: block;
   color: white;
   text-decoration: none;
@@ -601,7 +606,7 @@ body {
   border-left: 3px solid transparent;
 }
 
-.footer-links a:hover {
+.rodape-links a:hover {
   color: rgb(100, 200, 100);
   text-decoration: underline;
   border-left-color: rgb(70, 136, 70);
@@ -609,7 +614,7 @@ body {
   background-color: rgba(70, 136, 70, 0.1);
 }
 
-.footer-images {
+.rodape-imagens {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -618,12 +623,12 @@ body {
   gap: 15px;
 }
 
-.footer-images img {
+.rodape-imagens img {
   max-width: 150px;
   height: auto;
 }
 
-.footer-info {
+.rodape-info {
   font-size: 14px;
   padding: 15px;
   text-align: left;
@@ -631,7 +636,7 @@ body {
   background-color: rgb(0, 71, 0);
 }
 
-.footer-info p {
+.rodape-info p {
   margin-bottom: 8px;
   line-height: 1.4;
 }
@@ -639,17 +644,17 @@ body {
 /* Desktop - A partir de 768px */
 @media (min-width: 768px) {
   /* Navbar centralizada */
-  .header {
+  .cabecalho {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  .hamburger {
+  .menu-hamburguer {
     display: none;
   }
   
-  .navigation {
+  .navegacao {
     display: flex !important;
     background: transparent;
     padding: 0;
@@ -658,15 +663,15 @@ body {
     border-radius: 0;
   }
   
-  .navigation > li {
+  .navegacao > li {
     margin-right: 30px;
   }
   
-  .navigation li:last-child {
+  .navegacao li:last-child {
     margin-right: 0;
   }
   
-  .navigation li a {
+  .navegacao li a {
     background-color: transparent;
     padding: 8px 12px;
     border-radius: 4px;
@@ -674,17 +679,17 @@ body {
     font-weight: 500;
   }
   
-  .navigation li a:hover {
+  .navegacao li a:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
   
   /* Banner responsivo */
-  .banner h1 {
-    font-size: 4rem;
+  .destaque h1 {
+    font-size: 64px;
   }
   
-  .banner p {
-    font-size: 1.3rem;
+  .destaque p {
+    font-size: 21px;
   }
   
   /* Conteúdo responsivo */
@@ -694,33 +699,33 @@ body {
   }
   
   .content h1 {
-    font-size: 3.5rem;
+    font-size: 56px;
     margin-bottom: 30px;
   }
   
   /* Acesso rápido responsivo */
-  .services-grid {
+  .grade-servicos {
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
   }
   
   /* Notícias responsivo */
-  .news-container {
+  .noticias-container {
     grid-template-columns: 2fr 1fr;
   }
   
-  .news-main {
+  .noticias-principal {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  .footer-links {
+  .rodape-links {
     flex-direction: row;
     justify-content: center;
     gap: 50px;
     padding: 20px;
   }
   
-  .footer-links > div {
+  .rodape-links > div {
     flex: 1;
     min-width: 190px;
     max-width: 150px;
@@ -728,13 +733,13 @@ body {
     border-bottom: none;
   }
   
-  .footer-links p {
+  .rodape-links p {
     text-align: left;
     font-size: 20px;
     margin-bottom: 15px;
   }
   
-  .footer-links a {
+  .rodape-links a {
     text-align: left;
     padding: 8px 0;
     padding-left: 0;
@@ -742,7 +747,7 @@ body {
     border-left: none;
   }
   
-  .footer-images {
+  .rodape-imagens {
     flex-direction: row;
     justify-content: space-between;
     padding: 20px 40px;
@@ -750,23 +755,23 @@ body {
     margin: 0 auto;
   }
   
-  .footer-images img {
+  .rodape-imagens img {
     max-width: 200px;
   }
   
-  .footer-info {
+  .rodape-info {
     font-size: 16px;
     padding: 20px;
     text-align: center;
   }
   
-  .footer-info p {
+  .rodape-info p {
     margin-bottom: 5px;
     line-height: 1.5;
   }
   
   /* Cursos responsivo */
-  .courses-grid {
+  .grade-cursos {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -774,74 +779,96 @@ body {
 /* Responsividade Mobile para novas seções */
 @media (max-width: 767px) {
   /* Banner mobile */
-  .banner {
+  .destaque {
     height: 60vh;
     text-align: center;
     justify-content: center;
   }
   
-  .banner h1 {
-    font-size: 2.5rem;
+  .destaque h1 {
+    font-size: 40px;
   }
   
-  .banner p {
-    font-size: 1rem;
+  .destaque p {
+    font-size: 16px;
   }
   
-  .banner-arrows {
+  .destaque-setas {
     display: none;
   }
   
   /* Acesso rápido mobile */
-  .services-grid {
+  .grade-servicos {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
   
-  .service-card {
+  .cartao-servico {
     padding: 20px 15px;
   }
   
-  .service-card .icon {
+  .cartao-servico .icone {
     width: 50px;
     height: 50px;
-    font-size: 1.5rem;
+    font-size: 24px;
   }
   
   /* Notícias mobile */
-  .news-container {
-    grid-template-columns: 1fr;
+  .noticias-container {
+    display: flex;
+    flex-direction: column;
     gap: 30px;
   }
-  
-  .news-main {
-    grid-template-columns: 1fr;
-  }
-  
-  .events-sidebar {
-    order: -1;
-  }
-  
-  .news-card {
+  .noticias-principal {
+    display: flex;
     flex-direction: column;
+    gap: 30px;
   }
-  
-  .news-card img {
+  .eventos-lateral {
+    order: 2;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .cartao-noticia {
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+  }
+  .cartao-noticia img {
     width: 100%;
     height: 200px;
+    min-width: 0;
+    object-fit: cover;
+  }
+  /* Ajuste do ícone do menu no cabeçalho mobile */
+  .cabecalho {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  padding: 16px 19.2px 16px 19.2px;
+  }
+  .menu-hamburguer {
+    position: relative;
+    float: none;
+    margin-left: auto;
+    margin-right: 0;
+    z-index: 1001;
   }
   
   /* Cursos mobile */
-  .courses h2 {
-    font-size: 2rem;
+  .cursos h2 {
+    font-size: 32px;
   }
   
-  .courses-grid {
+  .grade-cursos {
     grid-template-columns: 1fr;
     gap: 20px;
   }
   
-  .course-card {
+  .cartao-curso {
     margin: 0 10px;
   }
 }

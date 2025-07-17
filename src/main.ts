@@ -1,8 +1,8 @@
 import './style.css'
 
 // Menu mobile
-const navigation = document.querySelector<HTMLUListElement>('.navigation')!
-const hamburger = document.querySelector<HTMLDivElement>('.hamburger')!
+const navigation = document.querySelector<HTMLUListElement>('.navegacao')!
+const hamburger = document.querySelector<HTMLDivElement>('.menu-hamburguer')!
 
 hamburger.addEventListener('click', () => {
   navigation.classList.toggle('active')
@@ -10,7 +10,7 @@ hamburger.addEventListener('click', () => {
 })
 
 // Fechar menu ao clicar nos links (mobile)
-const navLinks = document.querySelectorAll('.navigation a')
+const navLinks = document.querySelectorAll('.navegacao a')
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
     navigation.classList.remove('active')
@@ -27,14 +27,14 @@ document.addEventListener('click', (e) => {
 })
 
 // Funcionalidade dos indicadores do banner
-const dots = document.querySelectorAll('.dot')
-const bannerArrows = document.querySelectorAll('.banner-arrows button')
+const dots = document.querySelectorAll('.ponto')
+const bannerArrows = document.querySelectorAll('.destaque-setas button')
 
 dots.forEach((dot) => {
   dot.addEventListener('click', () => {
-    // Remove active de todos os dots
+    // Remove active de todos os pontos
     dots.forEach(d => d.classList.remove('active'))
-    // Adiciona active ao dot clicado
+    // Adiciona active ao ponto clicado
     dot.classList.add('active')
   })
 })
@@ -42,7 +42,7 @@ dots.forEach((dot) => {
 // Navegação do banner (setas)
 bannerArrows.forEach((button) => {
   button.addEventListener('click', () => {
-    const currentActive = document.querySelector('.dot.active')
+    const currentActive = document.querySelector('.ponto.active')
     const currentIndex = Array.from(dots).indexOf(currentActive as Element)
     
     // Determina se é botão anterior ou próximo
