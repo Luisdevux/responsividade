@@ -16,6 +16,50 @@ body {
   background: rgb(7, 119, 44);
   padding: 16px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 5px;
+  padding: 2px 8px 2px 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  margin: 0 16px;
+  min-width: 0;
+  flex: 1 1 260px;
+  max-width: 350px;
+  height: 38px;
+}
+
+.campo-pesquisa {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  color: #333;
+  width: 100%;
+  padding: 6px 8px 6px 0;
+}
+
+.botao-pesquisa {
+  background: none;
+  border: none;
+  color: rgb(7, 119, 44);
+  cursor: pointer;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.botao-pesquisa:hover, .botao-pesquisa:focus {
+  background: rgba(7,119,44,0.08);
 }
 
 .menu-hamburguer {
@@ -135,6 +179,18 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 16px 19.2px 16px 19.2px;
+    gap: 8px;
+  }
+  .barra-pesquisa {
+    flex: 1 1 100px;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 8px;
+    height: 34px;
+  }
+  .campo-pesquisa {
+    font-size: 15px;
+    padding: 5px 6px 5px 0;
   }
   .menu-hamburguer {
     position: relative;
